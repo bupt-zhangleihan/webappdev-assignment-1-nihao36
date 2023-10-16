@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+    0     /*
+11     分析：
+12         1.获取图片对象
+13         2.绑定单击事件
+14         3.每次点击切换图片
+15             * 规则：
+16                 * 如果灯是开的 on,切换图片为 off
+17                 * 如果灯是关的 off,切换图片为 on
+18                 * 使用标记flag来完成
+19 
+20     */
+<script>
+function changeImage()
+{
+	element=document.getElementById('myimage')
+	if (element.src.match("bulbon"))
+	{
+		element.src="/Users/nihaohao/Desktop/网络应用开发.代码/第三次作业/off.png";
+	}
+	else
+	{
+		element.src="/Users/nihaohao/Desktop/网络应用开发.代码/第三次作业/on.png";
+	}
+}
+</script>
+<img id="myimage" onclick="changeImage()" border="0" src="/Users/nihaohao/Desktop/网络应用开发.代码/第三次作业/off.png" width="100" height="180">
+<p>点击灯泡 开/关 灯</p>
+
+</body>
+</html>
